@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Park Royal Pickering</title>
   </head>
   <body>
     <style>
+      :root {
+        --head-font: "Abril Fatface", serif;
+        --p-font: "Ubuntu Mono", monospace;
+      }
       .container {
         text-align: center;
         display: flex;
@@ -25,21 +41,80 @@
       .navigation-links a {
         text-decoration: none;
         color: white;
-        font-size: 25px;
+        font-size: 20px;
+        font-family: var(--p-font);
+      }
+
+      .pickering-header h1 {
+        font-family: var(--head-font);
+        font-size: 45px;
       }
 
       .pickering-header {
         width: 100%;
         height: 450px;
         background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/123/649/original/parkroyal-hotel.jpeg?1713472398");
-        background-size: cover;
         background-position: center;
         color: white;
       }
 
+      .about-section p {
+        border-bottom: 2px solid black;
+      }
+
+      .about-section h2,
+      .pickering-infographics h2 {
+        font-family: var(--head-font);
+        font-size: 30px;
+      }
+
       .about-section,
       .pickering-facts {
-        border: 2px solid green;
+        font-family: var(--p-font);
+      }
+
+      .pickering-facts li {
+        list-style: none;
+      }
+
+      .pickering-infographics {
+        background-color: #171717;
+        color: white;
+        padding: 20px;
+        font-family: "Ubuntu Mono", monospace;
+      }
+
+      .pickering-infographics li {
+        list-style: none;
+      }
+
+      .pickering-infographics ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .urban-farm {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .urban-farm h2 {
+        font-family: "Abril Fatface", serif;
+        font-size: 45px;
+        margin: 0;
+      }
+
+      .urban-farm p {
+        font-size: 14px;
+        font-family: "Ubuntu Mono", monospace;
+        width: 50%;
+        text-align: center;
+      }
+
+      .urban-farm img {
+        width: 50%;
+        height: 50%;
       }
     </style>
     <div class="container">
@@ -84,11 +159,14 @@
           <h2>Infographics</h2>
           <ul>
             <li>50+ plant varieties for air purification</li>
+            <i class="fa-brands fa-pagelines"></i>
             <li>
               Rainwater harvesting system collects and recycles rainwater to
               irrigate the gardens
             </li>
+            <i class="fa-solid fa-cloud-rain"></i>
             <li>Solar cells light up the gardens</li>
+            <i class="fa-solid fa-sun"></i>
           </ul>
         </div>
         <div class="urban-farm">
@@ -96,12 +174,21 @@
           <p>
             The rooftop Urban Farm provides fresh ingredients for farm-to-table
             dining, which reduces hotel's reliance on food deliveries and lowers
-            carbon footprint.
+            carbon footprint. It is home to over 50 varieties of vegetables,
+            fruits, herbs and edible flowers. The Urban Farm provides
+            carbon-neutral, eco-friendly garnishes, aromatics and ingredients to
+            Pickering Hotel's restaurants and spas.
           </p>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/124/033/original/food-table.jpg?1713822125"
+          />
         </div>
       </div>
     </div>
-
+    <script
+      src="https://kit.fontawesome.com/9919d00e0a.js"
+      crossorigin="anonymous"
+    ></script>
     <script></script>
   </body>
 </html>
