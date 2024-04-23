@@ -60,6 +60,7 @@
 
       .about-section p {
         border-bottom: 2px solid black;
+        padding-bottom: 20px;
       }
 
       .about-section h2,
@@ -73,25 +74,36 @@
         font-family: var(--p-font);
       }
 
-      .pickering-facts li {
+      .pickering-facts ul {
         list-style: none;
+      }
+
+      .pickering-facts li {
+        font-style: italic;
+        margin: 0;
       }
 
       .pickering-infographics {
         background-color: #171717;
         color: white;
         padding: 20px;
-        font-family: "Ubuntu Mono", monospace;
+        font-family: var(--p-font);
       }
 
       .pickering-infographics li {
         list-style: none;
+        font-size: 15px;
       }
 
       .pickering-infographics ul {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+      }
+
+      .pickering-infographics i {
+        font-size: 16px;
+        color: rgb(16, 123, 14);
       }
 
       .urban-farm {
@@ -106,15 +118,15 @@
       }
 
       .urban-farm p {
-        font-size: 14px;
+        font-size: 15px;
         font-family: "Ubuntu Mono", monospace;
-        width: 50%;
+        width: 40%;
         text-align: center;
       }
 
       .urban-farm img {
-        width: 50%;
-        height: 50%;
+        width: 45%;
+        height: 45%;
       }
     </style>
     <div class="container">
@@ -124,13 +136,12 @@
             <a href="index.html">Home</a>
             <a href="#about-pickering">About</a>
             <a href="#urban-farm">Urban Farm</a>
-            <a href="#book">Book A Stay</a>
           </div>
           <h1>Park Royale Pickering</h1>
         </div>
 
         <div class="about-section">
-          <h2>About Royal Pickering</h2>
+          <h2 id="about-pickering">About Royal Pickering</h2>
           <p>
             Designed by world-renowned architects WOHA, PARKROYAL COLLECTION
             Pickering is an iconic eco-friendly hotel in Singapore, with a
@@ -170,7 +181,7 @@
           </ul>
         </div>
         <div class="urban-farm">
-          <h2>Urban Farm</h2>
+          <h2 id="urban-farm">Urban Farm</h2>
           <p>
             The rooftop Urban Farm provides fresh ingredients for farm-to-table
             dining, which reduces hotel's reliance on food deliveries and lowers
